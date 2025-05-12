@@ -1,0 +1,58 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.body {
+    display: flex;
+
+}
+
+.plano_de_fundo{
+    display: flex;
+    background-image:url(imagens/plano\ de\ fundo.jpg);
+    width: 90%;
+    height: 90%;
+}
+
+.container{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.header .container{
+    width: 100%;
+    justify-content: space-between;
+    background-color: #644132;
+}
+
+.header .navbar{
+
+     color: #C1B3AD;
+    list-style-type: none;
+    border: 0px solid;
+    border-radius: 100px;
+   /* box-shadow: 2px 4px 4px 4px #4B3126; */
+    margin-right: 15px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+
+    /* border: 0px solid ;
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+*/
+}
+.sobre_o_site{
+    display: flex;
+    position: relative;
+    height: 400px;
+    width: 300px;
+    background-color:beige;
+}
