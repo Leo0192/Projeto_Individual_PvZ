@@ -1,0 +1,128 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.body {   
+    height: 650px;
+    background-color: darkolivegreen
+}
+
+.plano_de_fundo{
+    height: 100%;
+
+}
+
+.container{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.header .container{
+    border-radius: 50px;
+    display: flex;
+    width: 100%;
+    background-color: #644132;
+}
+
+.header .navbar{
+    display: flex;
+     color: #C1B3AD;
+    list-style-type: none;
+    border: 0px solid;
+    border-radius: 100px;
+   /*/ box-shadow: 2px 4px 4px 4px #4B3126; */
+    margin-right: 15px;
+
+    border: 0px solid ;
+    border-radius: 100px;
+
+    
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+
+
+}
+
+.login .container {
+    display: flex;
+    background-color:#644132 ;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 50px;
+    border: solid 1px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 300px;
+}
+.sobre_o_site{
+    display: flex;
+    position: relative;
+    height: 400px;
+    width: 300px;
+    background-color:beige;
+}
+.cadastro .container{
+    display: flex;
+    background-color:#644132 ;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 50px;
+    border: solid 1px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 300px;
+}
+
+.sobre_mim{
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    background-color:#a18477 ;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 50px;
+    border: solid 1px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 700px;
+    height: 300px;
+}
+
+
+.sobre_jogo{
+    display: flex;
+        justify-self: center;
+    text-align: center;
+    background-color:#a18477 ;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 50px;
+    border: solid 1px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 700px;
+    height: 300px;
+}
+.sobre_site{
+    display: flex;
+        justify-self: center;
+    text-align: center;
+    background-color:#a18477 ;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 50px;
+    border: solid 1px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 700px;
+    height: 300px;
+}
