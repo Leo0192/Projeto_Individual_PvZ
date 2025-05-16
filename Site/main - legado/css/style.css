@@ -3,14 +3,10 @@
 }
 
 .body {   
-    height: 650px;
-    background-color: darkolivegreen
+    margin: 0;
+    background: #1b2a1d url(https://plantsvszombies.wiki.gg/images/0/0c/Site-background-April.png) repeat 0 0;
 }
 
-.plano_de_fundo{
-    height: 100%;
-
-}
 
 .container{
     display: flex;
@@ -19,10 +15,9 @@
 }
 
 .header .container{
-    border-radius: 50px;
-    display: flex;
     width: 100%;
     background-color: #644132;
+    border-bottom:solid #644132 px ;
 }
 
 .header .navbar{
