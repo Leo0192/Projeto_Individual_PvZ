@@ -4,7 +4,7 @@
 
 .body {   
     margin: 0;
-    background: #1b2a1d url(https://plantsvszombies.wiki.gg/images/0/0c/Site-background-April.png) repeat 0 0;
+    background-image: url(imagens/Site-background-April.webp);
 }
 
 
@@ -17,16 +17,16 @@
 .header .container{
     width: 100%;
     background-color: #644132;
-    border-bottom:solid #644132 px ;
+    border-bottom:solid #644132 px 2 ;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .header .navbar{
     display: flex;
-     color: #C1B3AD;
+    color: #C1B3AD;
     list-style-type: none;
     border: 0px solid;
-    border-radius: 100px;
-   /*/ box-shadow: 2px 4px 4px 4px #4B3126; */
     margin-right: 15px;
 
     border: 0px solid ;
@@ -53,13 +53,7 @@
     width: 250px;
     height: 300px;
 }
-.sobre_o_site{
-    display: flex;
-    position: relative;
-    height: 400px;
-    width: 300px;
-    background-color:beige;
-}
+
 .cadastro .container{
     display: flex;
     background-color:#644132 ;
@@ -93,31 +87,46 @@
 
 .sobre_jogo{
     display: flex;
-        justify-self: center;
+    justify-self: center;
     text-align: center;
-    background-color:#a18477 ;
+    align-items: center;
+    flex-direction: column;
+
+    background-color:#538335 ;
+    border: solid 6px; color: #115e1f;
+    box-shadow: 0px 0px 20px 0px black;
+    box-shadow: inset 0px 0px 10px black;
+
+    width: 700px;
+    height: 300px;
     margin-top: 100px;
     padding: 20px;
     border-radius: 50px;
-    border: solid 1px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 700px;
-    height: 300px;
+}
+
+.sobre_jogo .container .box{
+    color: black;
 }
 .sobre_site{
+
     display: flex;
-        justify-self: center;
+    justify-self: center;
     text-align: center;
-    background-color:#a18477 ;
+    align-items: center;
+    flex-direction: column;
+
+    background-color:#538335 ;
+    border: solid 6px; color: #115e1f;
+    box-shadow: 0px 0px 20px 0px black;
+    box-shadow: inset 0px 0px 10px black;
+
+    width: 700px;
+    height: 300px;
     margin-top: 100px;
     padding: 20px;
     border-radius: 50px;
-    border: solid 1px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 700px;
-    height: 300px;
+}
+
+.sobre_site .container .box{
+    color: black;
 }
