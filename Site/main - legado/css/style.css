@@ -42,49 +42,71 @@
 
 .login .container {
     display: flex;
-    background-color:#644132 ;
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color:#538335 ;
+    border: solid 6px; color: #115e1f;
+    box-shadow: 0px 0px 20px 0px black;
+    box-shadow: inset 0px 0px 10px black;
+
+    width: 400px;
+    height: 300px;
     margin-top: 100px;
     padding: 20px;
     border-radius: 50px;
-    border: solid 1px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 250px;
-    height: 300px;
+}
+.login .container .box{
+    color: black;
 }
 
 .cadastro .container{
     display: flex;
-    background-color:#644132 ;
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color:#538335 ;
+    border: solid 6px; color: #115e1f;
+    box-shadow: 0px 0px 20px 0px black;
+    box-shadow: inset 0px 0px 10px black;
+
+    width: 400px;
+    height: 300px;
     margin-top: 100px;
     padding: 20px;
     border-radius: 50px;
-    border: solid 1px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 250px;
-    height: 300px;
+}
+
+.cadastro .container .box{
+    color: black;
 }
 
 .sobre_mim{
     display: flex;
     justify-self: center;
     text-align: center;
-    background-color:#a18477 ;
+    align-items: center;
+    flex-direction: column;
+
+    background-color:#538335 ;
+    border: solid 6px; color: #115e1f;
+    box-shadow: 0px 0px 20px 0px black;
+    box-shadow: inset 0px 0px 10px black;
+
+    width: 700px;
+    height: 300px;
     margin-top: 100px;
     padding: 20px;
     border-radius: 50px;
-    border: solid 1px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 700px;
-    height: 300px;
 }
 
-
+.sobre_mim .container .box{
+    color: black;
+}
 .sobre_jogo{
     display: flex;
     justify-self: center;
@@ -128,5 +150,28 @@
 }
 
 .sobre_site .container .box{
+    color: black;
+}
+
+.tutorial .container {
+        display: flex;
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color:#538335 ;
+    border: solid 6px; color: #115e1f;
+    box-shadow: 0px 0px 20px 0px black;
+    box-shadow: inset 0px 0px 10px black;
+
+    width: 700px;
+    height: 300px;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.tutorial .container .box{
     color: black;
 }
