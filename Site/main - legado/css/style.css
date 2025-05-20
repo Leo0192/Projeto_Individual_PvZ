@@ -153,6 +153,8 @@
     color: black;
 }
 
+/* Editando a aba Turorial */
+
 .tutorial .container {
         display: flex;
     justify-self: center;
@@ -166,7 +168,7 @@
     box-shadow: inset 0px 0px 10px black;
 
     width: 700px;
-    height: 300px;
+    height: 500px;
     margin-top: 100px;
     padding: 20px;
     border-radius: 50px;
