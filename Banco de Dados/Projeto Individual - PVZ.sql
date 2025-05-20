@@ -1,21 +1,21 @@
 -- criando o banco de dados
-create database PIindividual;
+create database if not exists PIindividual;
 
 -- colocando o banco de dados em uso
 use PIindividual;
 
 -- criando a tabela usuário
-create table Usuario(
+create table if not exists usuario(
 id int primary key auto_increment not null,
-Nome varchar (60) not null, -- armazena o nome real do usuario
+nome varchar (60) not null, -- armazena o nome real do usuario
 nome_usuario varchar (40) not null, --  armazena o nome de usuarioa de quem está utilizando
-e_mail varchar (50) not null, -- armazena o email utilizado
+email varchar (50) not null, -- armazena o email utilizado
 senha varchar (20) not null, -- armazena a senha do usuário
 telefone char (14) not null -- armazena o telefone do usuário parapossível recuperação de senha (opcional)
 );
 
 -- criando a tabela Inforamções pessoais
-create table Informações_pessoais(
+create table if not exists Informações_pessoais(
 idUsuario int primary key auto_increment not null, -- referência o o id da tabela Usuario
 Nome_completo varchar (100), -- armazena o nome completo do usuário
 sexo_origem char (9), -- armazena o seo de origem do Usuário
@@ -26,9 +26,29 @@ check (sexo_origem in('masculino','feminino')) -- adicionando uma checagem na co
 );
 
 -- craindo a tabela Forum onde seram armazenadas as mensagens dos usuários a fim de organizar e manter um certo monitoramento na conversa
-create table Forum (
+create table if not exists Forum (
 idUsuario int primary key auto_increment not null,
 histórico_mensagem varchar (1000), -- armazena as mensagens de cada usuário  enviadas no fórum
 status char (7), -- adicionando o status da conta do usuário para ativo (caso tenha logado em até um mês) ou inativo
 check (status in ('ativo','inativo')) --  adiconando a checagem na coluna status do usuário
 );
+
+CREATE TABLE if not exists aviso (
+	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+	titulo VARCHAR(100),
+	descricao VARCHAR(150),
+	fk_usuario INT,
+	FOREIGN KEY (fk_usuario) REFERENCES Usuario(id)
+);
+
+-- Inserindo dados na tabela Usuario
+
+INSERT INTO usuario (nome, nome_usuario, email, senha, telefone)
+VALUES
+
+  ('Maria Silva', 'mariasilva', 'maria.silva@email.com', 'senha123', '(11)91234-5678'),
+  ('João Souza', 'joaosouza', 'joao.souza@email.com', 'senha456', '(21)99876-5432'),
+  ('Ana Costa', 'anacosta', 'ana.costa@email.com', 'senha789', '(31)98765-4321');
+  
+
+  
