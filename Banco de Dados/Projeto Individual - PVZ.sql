@@ -50,5 +50,26 @@ VALUES
   ('João Souza', 'joaosouza', 'joao.souza@email.com', 'senha456', '(21)99876-5432'),
   ('Ana Costa', 'anacosta', 'ana.costa@email.com', 'senha789', '(31)98765-4321');
   
+ -- Inserindo dados na tabela Informações_Pessoais
+  INSERT INTO Informações_pessoais (idUsuario, Nome_completo, sexo_origem, idade, País)
+VALUES
+  (1, 'Maria Aparecida da Silva', 'feminino', 28, 'Brasil'),
+  (2, 'João Pedro de Souza', 'masculino', 35, 'Brasil'),
+  (3, 'Ana Carolina Costa', 'feminino', 22, 'Brasil');
+  
+  -- Inserindo informações na tabela fórum
+  
+  INSERT INTO Forum (idUsuario, histórico_mensagem, status)
+VALUES
+  (1, 'Olá a todos! Estou animada para participar do fórum.', 'ativo'),
+  (2, 'Bom dia, pessoal! Alguém mais teve problemas com o login?', 'ativo'),
+  (3, 'Alguém pode me ajudar com a redefinição de senha?', 'inativo');
 
+-- inserindo dados na tabela aviso
+
+INSERT INTO aviso (idUsuario, titulo, descricao, fk_usuario)
+VALUES
+  (1, 'Bem-vinda Maria!', 'Seja bem-vinda ao nosso fórum. Confira as regras da comunidade.', 1),
+  (2, 'Atenção João', 'Verifique se seu e-mail está correto para evitar problemas de login.', 2),
+  (3, 'Olá Ana', 'Recomendamos alterar sua senha regularmente para manter sua conta segura.', 3);
   
