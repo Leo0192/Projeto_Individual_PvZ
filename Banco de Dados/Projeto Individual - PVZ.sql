@@ -65,11 +65,5 @@ VALUES
   (2, 'Bom dia, pessoal! Alguém mais teve problemas com o login?', 'ativo'),
   (3, 'Alguém pode me ajudar com a redefinição de senha?', 'inativo');
 
--- inserindo dados na tabela aviso
-
-INSERT INTO aviso (idUsuario, titulo, descricao, fk_usuario)
-VALUES
-  (1, 'Bem-vinda Maria!', 'Seja bem-vinda ao nosso fórum. Confira as regras da comunidade.', 1),
-  (2, 'Atenção João', 'Verifique se seu e-mail está correto para evitar problemas de login.', 2),
-  (3, 'Olá Ana', 'Recomendamos alterar sua senha regularmente para manter sua conta segura.', 3);
+-- dados inseridos no commit anterior
   
