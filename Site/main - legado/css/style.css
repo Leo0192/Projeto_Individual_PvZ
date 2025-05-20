@@ -1,7 +1,7 @@
 *{
     font-family: 'Courier New', Courier, monospace;
 }
-
+/* estilizando o body */
 .body {   
     margin: 0;
     background-image: url(imagens/Site-background-April.webp);
@@ -13,7 +13,7 @@
     width: 80%;
     margin: auto;
 }
-
+/* adicionando navbar */
 .header .container{
     width: 100%;
     background-color: #644132;
@@ -39,6 +39,7 @@
 
 
 }
+/* Tela de Login */
 
 .login .container {
     display: flex;
@@ -61,7 +62,7 @@
 .login .container .box{
     color: black;
 }
-
+ /*Tela de Cadastro*/
 .cadastro .container{
     display: flex;
     justify-self: center;
@@ -84,7 +85,7 @@
 .cadastro .container .box{
     color: black;
 }
-
+/* Aba Sobre mim */
 .sobre_mim{
     display: flex;
     justify-self: center;
@@ -107,6 +108,7 @@
 .sobre_mim .container .box{
     color: black;
 }
+/* Aba sobre o jogo */
 .sobre_jogo{
     display: flex;
     justify-self: center;
@@ -129,6 +131,7 @@
 .sobre_jogo .container .box{
     color: black;
 }
+/* Aba sobre o site */
 .sobre_site{
 
     display: flex;
@@ -154,7 +157,6 @@
 }
 
 /* Editando a aba Turorial */
-
 .tutorial .container {
         display: flex;
     justify-self: center;
