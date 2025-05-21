@@ -10,7 +10,7 @@
 /* Adicionando um fundo sobre a imagem */
 .fundo_retangular{
     background-color: #0d1c18;      
-    color: black;                  
+    color: white;                  
     width: 1000px;                
     margin: 40px auto;               
     padding: 30px;                 
@@ -26,7 +26,7 @@
  /* Estilizando o Título da página */
 .bem_vindo{
     display: flex;
-    color: black;
+    color: white;
     flex-direction: row;
     align-items: end;
     justify-content: center;
@@ -43,7 +43,7 @@
 
 .header .navbar{
     display: flex;
-    color: #C1B3AD;
+    color: white;
     list-style-type: none;
     border: 0px solid;
     margin-right: 15px;
@@ -80,7 +80,7 @@
 }
 
 .sobre_site .container .box{
-    color: black;
+    color: white;
 }
 /* Aba sobre o jogo */
 .sobre_jogo{
@@ -103,7 +103,7 @@
 }
 
 .sobre_jogo .container .box{
-    color: black;
+    color: white;
 }
 /* Aba Sobre mim */
 .sobre_mim{
@@ -126,7 +126,7 @@
 }
 
 .sobre_mim .container .box{
-    color: black;
+    color: white;
 }
 /*Tela de Cadastro*/
 .cadastro .container{
@@ -149,7 +149,7 @@
 }
 
 .cadastro .container .box{
-    color: black;
+    color: white;
     /* Tela de Login */
     
 }
@@ -172,7 +172,7 @@
     border-radius: 50px;
 }
 .login .container .box{
-    color: black;
+    color: white;
 }
 
 /* Editando a aba Turorial */
@@ -196,5 +196,5 @@
 }
 
 .tutorial .container .box{
-    color: black;
+    color: white;
 }
