@@ -1,0 +1,200 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+/* estilizando o body */
+.body {   
+    margin: 0;
+    background-image: url(imagens/Site-background-April.webp);
+}
+
+/* Adicionando um fundo sobre a imagem */
+.fundo_retangular{
+    background-color: #0d1c18;      
+    color: white;                  
+    width: 1000px;                
+    margin: 40px auto;               
+    padding: 30px;                 
+    box-shadow: 0 0 20px black;
+    border-radius: 50px;
+}
+/* definindo padrões para o container */
+.container{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+ /* Estilizando o Título da página */
+.bem_vindo{
+    display: flex;
+    color: white;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+}
+/* adicionando navbar */
+.header .container{
+    width: 100%;
+    background-color: darkgreen;
+    border-bottom:solid #644132 px 2 ;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-radius: 100px;
+}
+
+.header .navbar{
+    display: flex;
+    color: white;
+    list-style-type: none;
+    border: 0px solid;
+    margin-right: 15px;
+
+    border: 0px solid ;
+    border-radius: 100px;
+
+    
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+
+
+}
+/* Aba sobre o site */
+.sobre_site{
+
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color:#538335 ;
+    border: solid 6px; color: #115e1f;
+    box-shadow: 0px 0px 20px 0px black;
+    box-shadow: inset 0px 0px 10px black;
+
+    width: 700px;
+    height: 280px;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.sobre_site .container .box{
+    color: white;
+}
+/* Aba sobre o jogo */
+.sobre_jogo{
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background-color:#538335 ;
+    border: solid 6px; color: #115e1f;
+    box-shadow: 0px 0px 20px 0px black;
+    box-shadow: inset 0px 0px 10px black;
+    
+    width: 700px;
+    height: 300px;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.sobre_jogo .container .box{
+    color: white;
+}
+/* Aba Sobre mim */
+.sobre_mim{
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color:#538335 ;
+    border: solid 6px; color: #115e1f;
+    box-shadow: 0px 0px 20px 0px black;
+    box-shadow: inset 0px 0px 10px black;
+
+    width: 700px;
+    height: 300px;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.sobre_mim .container .box{
+    color: white;
+}
+/*Tela de Cadastro*/
+.cadastro .container{
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background-color:#538335 ;
+    border: solid 6px; color: #115e1f;
+    box-shadow: 0px 0px 20px 0px black;
+    box-shadow: inset 0px 0px 10px black;
+    
+    width: 400px;
+    height: 300px;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.cadastro .container .box{
+    color: white;
+    /* Tela de Login */
+    
+}
+.login .container {
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color:#538335 ;
+    border: solid 6px; color: #115e1f;
+    box-shadow: 0px 0px 20px 0px black;
+    box-shadow: inset 0px 0px 10px black;
+
+    width: 400px;
+    height: 300px;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 50px;
+}
+.login .container .box{
+    color: white;
+}
+
+/* Editando a aba Turorial */
+.tutorial .container {
+        display: flex;
+    justify-self: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color:#538335 ;
+    border: solid 6px; color: #115e1f;
+    box-shadow: 0px 0px 20px 0px black;
+    box-shadow: inset 0px 0px 10px black;
+
+    width: 700px;
+    height: 500px;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.tutorial .container .box{
+    color: white;
+}
