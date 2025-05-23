@@ -10,8 +10,7 @@ id int primary key auto_increment not null,
 nome varchar (60) not null, -- armazena o nome real do usuario
 nome_usuario varchar (40) not null, --  armazena o nome de usuarioa de quem está utilizando
 email varchar (50) not null, -- armazena o email utilizado
-senha varchar (20) not null, -- armazena a senha do usuário
-telefone char (14) not null -- armazena o telefone do usuário parapossível recuperação de senha (opcional)
+senha varchar (20) not null -- armazena a senha do usuário
 );
 
 -- criando a tabela Inforamções pessoais
@@ -43,12 +42,12 @@ CREATE TABLE if not exists aviso (
 
 -- Inserindo dados na tabela Usuario
 
-INSERT INTO usuario (nome, nome_usuario, email, senha, telefone)
+INSERT INTO usuario (nome, nome_usuario, email, senha)
 VALUES
 
-  ('Maria Silva', 'mariasilva', 'maria.silva@email.com', 'senha123', '(11)91234-5678'),
-  ('João Souza', 'joaosouza', 'joao.souza@email.com', 'senha456', '(21)99876-5432'),
-  ('Ana Costa', 'anacosta', 'ana.costa@email.com', 'senha789', '(31)98765-4321');
+  ('leo1231', 'leoqwdad1', 'leo@gmafagaail.com', 'senhasdafasa123'),
+  ('João Souza', 'joaosouza', 'joao.souza@email.com', 'senha456'),
+  ('Ana Costa', 'anacosta', 'ana.costa@email.com', 'senha789');
   
  -- Inserindo dados na tabela Informações_Pessoais
   INSERT INTO Informações_pessoais (idUsuario, Nome_completo, sexo_origem, idade, País)
@@ -66,4 +65,4 @@ VALUES
   (3, 'Alguém pode me ajudar com a redefinição de senha?', 'inativo');
 
 -- dados inseridos no commit anterior
-  
+  select* from usuario;
