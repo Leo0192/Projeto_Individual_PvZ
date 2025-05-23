@@ -116,10 +116,9 @@
             body: JSON.stringify({
                 emailServer: emailVar,
                 senhaServer: senhaVar
-            })
+            }) 
         }).then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
-
             if (resposta.ok) {
                 console.log(resposta);
 // session storage = guardar os dados do .xxxx, tem que colocar os dados que serão exibidos para salvar
@@ -128,9 +127,9 @@
                     console.log(json);
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.NOME_USUARIO = json.nome_usuario;
                     sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+                    sessionStorage.NOME = json.nome;
 
                     setTimeout(function () {
                         window.location = "./dashboard/cards.html";

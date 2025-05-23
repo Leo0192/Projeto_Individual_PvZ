@@ -7,9 +7,9 @@ var usuarioModel = require("../models/usuarioModel");
 //     var senha = req.body.senhaServer;
 
 function autenticar(req, res) {
-    var email = req.body.email;
-    var senha = req.body.senha;
-
+    var email = req.body.emailServer;
+    var senha = req.body.senhaServer;
+console.log(senha,email)
     // Faz uma chamada ao banco de dados e traz os dados das tabelas
     usuarioModel.autenticar(email, senha)
         .then(
