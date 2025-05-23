@@ -18,8 +18,6 @@ var app = express();
 // rotas possiveis para utilizar
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
-var medidasRouter = require("./src/routes/medidas");
-var aquariosRouter = require("./src/routes/aquarios");
 
 // maneiras de usar as rotas
 app.use(express.json());
@@ -30,8 +28,6 @@ app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
-app.use("/medidas", medidasRouter);
-app.use("/aquarios", aquariosRouter);
 
 app.listen(PORTA_APP, function () {
     console.log(`
