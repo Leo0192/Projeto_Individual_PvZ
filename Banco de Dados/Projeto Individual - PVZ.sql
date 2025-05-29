@@ -1,8 +1,10 @@
 -- criando o banco de dados
 create database if not exists PIindividual;
 
+
 -- colocando o banco de dados em uso
 use PIindividual;
+
 
 -- criando a tabela usuário
 create table if not exists usuario(
@@ -20,7 +22,7 @@ Nome_completo varchar (100), -- armazena o nome completo do usuário
 sexo_origem char (9), -- armazena o seo de origem do Usuário
 idade int, --  armazena a idade do usuário
 País varchar (25), -- registra o seu país de origem
-foreign key (idUsuario) references Usuario (id), -- adicionando uma foreign key na coluna idUsuario
+foreign key (idUsuario) references usuario (id), -- adicionando uma foreign key na coluna idUsuario
 check (sexo_origem in('masculino','feminino')) -- adicionando uma checagem na coluna sexo para: masculino e feminino
 );
 
@@ -37,32 +39,33 @@ CREATE TABLE if not exists aviso (
 	titulo VARCHAR(100),
 	descricao VARCHAR(150),
 	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES Usuario(id)
+	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
 -- Inserindo dados na tabela Usuario
 
-INSERT INTO usuario (nome, nome_usuario, email, senha)
-VALUES
+-- INSERT INTO usuario (nome, nome_usuario, email, senha)
 
-  ('leo1231', 'leoqwdad1', 'leo@gmafagaail.com', 'senhasdafasa123'),
-  ('João Souza', 'joaosouza', 'joao.souza@email.com', 'senha456'),
-  ('Ana Costa', 'anacosta', 'ana.costa@email.com', 'senha789');
+
+  -- ('leo1231', 'leoqwdad1', 'leo@gmafagaail.com', 'senhasdafasa123'),
+  -- ('João Souza', 'joaosouza', 'joao.souza@email.com', 'senha456'),
+  -- ('Ana Costa', 'anacosta', 'ana.costa@email.com', 'senha789');
   
  -- Inserindo dados na tabela Informações_Pessoais
-  INSERT INTO Informações_pessoais (idUsuario, Nome_completo, sexo_origem, idade, País)
-VALUES
-  (1, 'Maria Aparecida da Silva', 'feminino', 28, 'Brasil'),
-  (2, 'João Pedro de Souza', 'masculino', 35, 'Brasil'),
-  (3, 'Ana Carolina Costa', 'feminino', 22, 'Brasil');
+ 
+ -- INSERT INTO Informações_pessoais (idUsuario, Nome_completo, sexo_origem, idade, País)
+
+--  (1, 'Maria Aparecida da Silva', 'feminino', 28, 'Brasil'),
+--  (2, 'João Pedro de Souza', 'masculino', 35, 'Brasil'),
+--  (3, 'Ana Carolina Costa', 'feminino', 22, 'Brasil');
   
   -- Inserindo informações na tabela fórum
   
-  INSERT INTO Forum (idUsuario, histórico_mensagem, status)
-VALUES
-  (1, 'Olá a todos! Estou animada para participar do fórum.', 'ativo'),
-  (2, 'Bom dia, pessoal! Alguém mais teve problemas com o login?', 'ativo'),
-  (3, 'Alguém pode me ajudar com a redefinição de senha?', 'inativo');
+--  INSERT INTO Forum (idUsuario, histórico_mensagem, status)
+
+--  (1, 'Olá a todos! Estou animada para participar do fórum.', 'ativo'),
+--  (2, 'Bom dia, pessoal! Alguém mais teve problemas com o login?', 'ativo'),
+--  (3, 'Alguém pode me ajudar com a redefinição de senha?', 'inativo');
 
 -- dados inseridos no commit anterior
   select* from usuario;
