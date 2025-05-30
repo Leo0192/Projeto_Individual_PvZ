@@ -1,65 +1,132 @@
-*{
+* {
     font-family: 'Courier New', Courier, monospace;
 }
+
 /* estilizando o body */
-.body {   
+.body {
     margin: 0;
     background-image: url(../imagens/Site-background-April.webp);
 }
 
+.id {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner {
+
+    width: 850px;
+    height: 274px;
+    border-radius: 5px;
+    margin: 10px;
+    justify-self: center;
+}
+
+.button {
+    margin-top: 10px;
+}
+
+h2 {
+    color: white;
+}
+
+span {
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+}
+
+p {
+    font-size: 18px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.campo .span {
+    text-align: left;
+}
+
+.input {
+    display: flex;
+    border: solid 3px;
+    color: darkgreen;
+    border-radius: 10px;
+    height: 40px;
+    width: 300px;
+
+}
+
+.botao {
+    display: flex;
+    background-color: darkgreen;
+    border-radius: 20px;
+    color: white;
+}
+
 /* Adicionando um fundo sobre a imagem */
-.fundo_retangular{
-    background-color: #0d1c18;      
-    color: white;                  
-    width: 1000px;                
-    margin: 40px auto;               
-    padding: 30px;                 
+.fundo_retangular {
+    background-color: #0d1c18;
+    color: white;
+    height: auto;
+    width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
     box-shadow: 0 0 20px black;
     border-radius: 50px;
 }
+
 /* definindo padrões para o container */
-.container{
+.container {
     display: flex;
     width: 80%;
     margin: auto;
 }
- /* Estilizando o Título da página */
-.bem_vindo{
+
+/* Estilizando o Título da página */
+.bem_vindo {
     display: flex;
     color: white;
     flex-direction: row;
     align-items: end;
     justify-content: center;
 }
+
 /* adicionando navbar */
-.header .container{
+.header .container {
     width: 100%;
     background-color: darkgreen;
-    border-bottom:solid #644132 px 2 ;
-    justify-content: flex-start;
-    align-items: flex-end;
+    border-bottom: solid white px 2;
+    justify-content: flex-end;
     border-radius: 100px;
+    list-style-type: none;
 }
 
-.header .navbar{
+.header .navbar {
+    gap: 15px;
     display: flex;
-    color: white;
+    color: black;
     list-style-type: none;
     border: 0px solid;
     margin-right: 15px;
 
-    border: 0px solid ;
+    border: 0 px solid;
     border-radius: 100px;
 
-    
+
     justify-content: space-evenly;
     align-items: center;
     width: 80%;
 
 
 }
+
 /* Aba sobre o site */
-.sobre_site{
+.sobre_site {
 
     display: flex;
     justify-self: center;
@@ -67,8 +134,9 @@
     align-items: center;
     flex-direction: column;
 
-    background-color:#538335 ;
-    border: solid 6px; color: #115e1f;
+    background-color: #538335;
+    border: solid 6px;
+    color: #115e1f;
     box-shadow: 0px 0px 20px 0px black;
     box-shadow: inset 0px 0px 10px black;
 
@@ -79,22 +147,24 @@
     border-radius: 50px;
 }
 
-.sobre_site .container .box{
+.sobre_site .container .box {
     color: white;
 }
+
 /* Aba sobre o jogo */
-.sobre_jogo{
+.sobre_jogo {
     display: flex;
     justify-self: center;
     text-align: center;
     align-items: center;
     flex-direction: column;
-    
-    background-color:#538335 ;
-    border: solid 6px; color: #115e1f;
+
+    background-color: #538335;
+    border: solid 6px;
+    color: #115e1f;
     box-shadow: 0px 0px 20px 0px black;
     box-shadow: inset 0px 0px 10px black;
-    
+
     width: 700px;
     height: 300px;
     margin-top: 100px;
@@ -102,19 +172,21 @@
     border-radius: 50px;
 }
 
-.sobre_jogo .container .box{
+.sobre_jogo .container .box {
     color: white;
 }
+
 /* Aba Sobre mim */
-.sobre_mim{
+.sobre_mim {
     display: flex;
     justify-self: center;
     text-align: center;
     align-items: center;
     flex-direction: column;
 
-    background-color:#538335 ;
-    border: solid 6px; color: #115e1f;
+    background-color: #538335;
+    border: solid 6px;
+    color: #115e1f;
     box-shadow: 0px 0px 20px 0px black;
     box-shadow: inset 0px 0px 10px black;
 
@@ -125,34 +197,45 @@
     border-radius: 50px;
 }
 
-.sobre_mim .container .box{
+.sobre_mim .container .box {
     color: white;
 }
+
 /*Tela de Cadastro*/
-.cadastro .container{
+.cadastro .container {
     display: flex;
     justify-self: center;
     text-align: center;
     align-items: center;
     flex-direction: column;
-    
-    background-color:#538335 ;
-    border: solid 6px; color: #115e1f;
+
+    background-color: #538335;
+    border: solid 6px;
+    color: #115e1f;
     box-shadow: 0px 0px 20px 0px black;
     box-shadow: inset 0px 0px 10px black;
-    
-    width: 400px;
-    height: 300px;
-    margin-top: 100px;
+
+    width: 500px;
+    height: 510px;
+    margin-top: 50px;
     padding: 20px;
     border-radius: 50px;
 }
 
-.cadastro .container .box{
+.cadastro .container .box {
     color: white;
-    /* Tela de Login */
-    
+
 }
+
+/* Tela de Login */
+
+.card-login {
+    height: 474px;
+    width: 305px;
+}
+
+
+
 .login .container {
     display: flex;
     justify-self: center;
@@ -160,47 +243,49 @@
     align-items: center;
     flex-direction: column;
 
-    background-color:#538335 ;
-    border: solid 6px; color: #115e1f;
+    background-color: #538335;
+    border: solid 6px;
+    color: #115e1f;
     box-shadow: 0px 0px 20px 0px black;
     box-shadow: inset 0px 0px 10px black;
 
-    width: 400px;
+    width: 500px;
     height: 300px;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 20px;
     border-radius: 50px;
 }
 
-.login .container .box{
+.login .container .box {
     color: white;
 }
 
 .loading-div {
-  width: 50px;
-  display: none;
+    width: 50px;
+    display: none;
 }
 
 .loading-div img {
-  height: 50px;
-  width: 50px;
+    height: 50px;
+    width: 50px;
 }
 
 #div_erros_login {
-  display: none
+    display: none
 }
 
 
 /* Editando a aba Turorial */
 .tutorial .container {
-        display: flex;
+    display: flex;
     justify-self: center;
     text-align: center;
     align-items: center;
     flex-direction: column;
 
-    background-color:#538335 ;
-    border: solid 6px; color: #115e1f;
+    background-color: #538335;
+    border: solid 6px;
+    color: #115e1f;
     box-shadow: 0px 0px 20px 0px black;
     box-shadow: inset 0px 0px 10px black;
 
@@ -211,6 +296,6 @@
     border-radius: 50px;
 }
 
-.tutorial .container .box{
+.tutorial .container .box {
     color: white;
 }
