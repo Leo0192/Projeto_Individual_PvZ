@@ -1,6 +1,7 @@
 -- criando o banco de dados
 	create database if not exists PIindividual;
 
+-- drop database PIindividual;
 	-- colocando o banco de dados em uso
 	use PIindividual;
 
@@ -16,15 +17,17 @@
 -- criando a tabela do quiz
 
 create table if not exists Quiz(
-id int primary key ,
-PerguntaId int ,
-RespostaCerta varchar(100) not null,
-RespostaCerta2 varchar(100)
+id int primary key auto_increment,
+nome varchar (30),
+categoria varchar (20),
+qtdPerguntas int
 );
 
 create table if not exists usuarioQuiz(
 fkQuiz int,
 fkUsuario int,
+acertos int,
+pontuacao int,
 foreign key (fkQuiz) references Quiz(id),
 foreign key (fkUsuario) references usuario(id),
 primary key (fkUsuario, fkQuiz)
@@ -40,14 +43,18 @@ VALUES
   ('João Souza', 'joaosouza', 'joao.souza@email.com', 'senha456'),
   ('Ana Costa', 'anacosta', 'ana.costa@email.com', 'senha789');
   
-INSERT INTO Quiz (id, perguntaId, RespostaCerta, RespostaCerta2)
-VALUES ();
+INSERT INTO Quiz (nome, categoria, qtdPerguntas)
+VALUES ('Plants vs Zombies', 'jogos', 10);
 
-INSERT INTO usuarioQuiz(fkQuiz,fkUsuario)
+INSERT INTO usuarioQuiz(fkQuiz,fkUsuario,acertos,pontuacao)
 VALUES ();
   
 
 -- dados inseridos no commit anterior
   select* from usuario;
+  
+  select* from Quiz;
+  
+  select* from usuarioQuiz;
   
   

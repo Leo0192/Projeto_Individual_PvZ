@@ -133,11 +133,11 @@ const PerguntaElement = document.getElementById("pergunta")
 const answerButtons  = document.getElementById("answer_button")
 const ProximoButton = document.getElementById("next_btn")
 
-let currentQuestionIndex = 0
-let pontuacao = 0
+var perguntaAtualIndex = 0
+var pontuacao = 0
 
 function ComecarQuiz() {
-    currentQuestionIndex = 0
+    perguntaAtualIndex = 0
     pontuacao = 0
     ProximoButton.innerHTML = "Próxima"
     AparecerPergunta()
@@ -152,12 +152,12 @@ function resetState() {
 
 function AparecerPergunta() {
     resetState()
-    let currentQuestion = perguntas[currentQuestionIndex]
-    let PerguntaNo = currentQuestionIndex + 1
-    PerguntaElement.innerHTML = PerguntaNo + ". " + currentQuestion.pergunta
+    let perguntaAtual = perguntas[perguntaAtualIndex]
+    let PerguntaNo = perguntaAtualIndex + 1
+    PerguntaElement.innerHTML = PerguntaNo + ". " + perguntaAtual.pergunta
 
     // acessando o array de respostas
-    currentQuestion.respostas.forEach((resposta) => {
+    perguntaAtual.respostas.forEach((resposta) => {
         const button = document.createElement("button")
         button.innerHTML = resposta.text
         answerButtons.appendChild(button)
@@ -168,7 +168,7 @@ function AparecerPergunta() {
 }
 
 function SelecionarResposta(e){
-    const respostas = perguntas[currentQuestionIndex].respostas
+    const respostas = perguntas[perguntaAtualIndex].respostas
     const respostaCorreta = respostas.filter((resposta) => resposta.correct == true)[0]
 
     const selectBtn = e.target
@@ -186,8 +186,8 @@ function SelecionarResposta(e){
 }
 
 function handleNextButton(){
-    currentQuestionIndex++
-    if (currentQuestionIndex < perguntas.length){
+    perguntaAtualIndex++
+    if (perguntaAtualIndex < perguntas.length){
         AparecerPergunta()
     } else {
         AparecerPontuacao()
@@ -202,7 +202,7 @@ function AparecerPontuacao(){
 }
 
 ProximoButton.addEventListener("click", () => {
-    if (currentQuestionIndex < perguntas.length){
+    if (perguntaAtualIndex < perguntas.length){
         handleNextButton()
         } else {
             ComecarQuiz()
@@ -212,6 +212,32 @@ ProximoButton.addEventListener("click", () => {
 function limparSessao() {
     sessionStorage.clear();
     window.location = "../login.html";
+}
+
+function guardarResultado(){
+
+    fetch("/quiz/inserirPontuacao", {
+        method: "POST" ,
+        headers: {
+            "Content-Type": "application/json",
+        }, 
+        body: JSON.stringify({
+            pontuacaoServer: pontuacao,
+            fkUsuarioServer: fkUsuario
+        }),
+    })
+      .then(response => {
+        if (!response.ok) {
+            return response.text().then(texto => {
+                console.error("Erro na resposta do backend:", texto)
+            });
+        } else {
+            console.log("Requisição bem-sucedida");
+        }
+      })
+        .catch(erro => {
+            console.error("Erro na requisição", erro);
+        });
 }
 
 ComecarQuiz()
