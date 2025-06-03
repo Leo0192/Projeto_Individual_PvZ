@@ -18,6 +18,7 @@ var app = express();
 // rotas possiveis para utilizar
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
+var quizRouter = require("./src/routes/Quiz");
 
 // maneiras de usar as rotas
 app.use(express.json());
@@ -28,6 +29,7 @@ app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
+app.use("/quiz", quizRouter);
 
 app.listen(PORTA_APP, function () {
     console.log(`

@@ -1,13 +1,11 @@
 var quizModel = require("../models/QuizModel");
 
-function inserirpontuacao(req, res) {
+function inserirPontuacao(req, res) {
 
     var fkUsuario = req.body.fkUsuarioServer;
     var pontuacao = req.body.pontuacaoServer;
 
-    console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
-
-    QuizModel.inserirpontuacao(pontuacao, fkUsuario)
+    quizModel.inserirPontuacao(pontuacao, fkUsuario)
     .then
     (function (resultado) {
         if (resultado.length > 0) {
@@ -25,11 +23,11 @@ function inserirpontuacao(req, res) {
 
 function buscarPontuacao(req, res) {
 
-    const idUsuario = req.params.idUsuario;
+    const fkUsuario = req.params.fkUsuario;
 
     console.log(`Recuperando medidas em tempo real`);
 
-    QuizModel.buscarPontuacao(idUsuario)
+    quizModel.buscarPontuacao(fkUsuario)
     .then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
@@ -45,6 +43,5 @@ function buscarPontuacao(req, res) {
 
 module.exports = {
     buscarPontuacao,
-    inserirpontuacao
-
+    inserirPontuacao
 }

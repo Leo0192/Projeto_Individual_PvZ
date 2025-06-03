@@ -9,13 +9,11 @@ function inserirPontuacao(pontuacao, fkUsuario) {
     return database.executar(instrucaoSql);
 }
 
-
-
 function buscarPontuacao(idUsuario) {
 
-    var instrucaoSql = `select pontuacao from usuario_Quiz
-                        where fkUsuario = ${idUsuario};`
-
+    var instrucaoSql = `
+    select max(pontuacao) from usuarioQuiz
+    where fkUsuario = ${idUsuario};`
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }

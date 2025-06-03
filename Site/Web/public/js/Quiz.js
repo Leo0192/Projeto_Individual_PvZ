@@ -197,8 +197,7 @@ function handleNextButton(){
 function AparecerPontuacao(){
     resetState()
     PerguntaElement.innerHTML = `Você acertou ${pontuacao} de ${perguntas.length}`
-    // ProximoButton.innerHTML = "Jogar De Novo"
-    // ProximoButton.style.display = "block"
+    guardarResultado();
 }
 
 ProximoButton.addEventListener("click", () => {
@@ -215,6 +214,8 @@ function limparSessao() {
 }
 
 function guardarResultado(){
+
+    var fkUsuario = sessionStorage.ID_USUARIO;
 
     fetch("/quiz/inserirPontuacao", {
         method: "POST" ,
