@@ -22,5 +22,5 @@ function buscarPontuacao(idUsuario) {
 
 module.exports = {
     buscarPontuacao,
-    inserirpontuacao
+    inserirPontuacao
 }

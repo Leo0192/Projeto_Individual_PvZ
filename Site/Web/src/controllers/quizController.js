@@ -2,11 +2,14 @@ var quizModel = require("../models/QuizModel");
 
 function inserirpontuacao(req, res) {
 
-    var idUsuario = req.params.idUsuario;
+    var fkUsuario = req.body.fkUsuarioServer;
+    var pontuacao = req.body.pontuacaoServer;
 
     console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
 
-    QuizModel.buscarpontuacao(idUsuario, limite_linhas).then(function (resultado) {
+    QuizModel.inserirpontuacao(pontuacao, fkUsuario)
+    .then
+    (function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
@@ -14,7 +17,7 @@ function inserirpontuacao(req, res) {
         }
     }).catch(function (erro) {
         console.log(erro);
-        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
+        console.log("Houve um erro ao buscar ao inserir.", erro.sqlMessage);
         res.status(500).json(erro.sqlMessage);
     });
 }
@@ -22,11 +25,12 @@ function inserirpontuacao(req, res) {
 
 function buscarPontuacao(req, res) {
 
-    var idUsuario = req.params.idUsuario;
+    const idUsuario = req.params.idUsuario;
 
     console.log(`Recuperando medidas em tempo real`);
 
-    medidaModel.buscarMedidasEmTempoReal(idAquario).then(function (resultado) {
+    QuizModel.buscarPontuacao(idUsuario)
+    .then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {

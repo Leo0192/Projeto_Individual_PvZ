@@ -221,7 +221,7 @@ function guardarResultado(){
         headers: {
             "Content-Type": "application/json",
         }, 
-        body: JSON.stringify({
+        body:JSON.stringify({
             pontuacaoServer: pontuacao,
             fkUsuarioServer: fkUsuario
         }),
