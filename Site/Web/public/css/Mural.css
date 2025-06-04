@@ -6,87 +6,6 @@ body {
   margin: 0;
   padding: 0;
 }
-/* pagina mural */
-
-/* 
-.label-captura {
-  display: flex;
-  justify-content: center;
-} */
-
-/* .dash-right .avisos {
-  width: 100%;
-  color: rgb(216, 216, 216);
-} */
-
-/* .dash-right .avisos .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
-/* .dash-right .avisos .container .div-form {
-  width: 95%;
-}
-
-.dash-right .avisos .container .div-form #form_postagem {
-  width: 95%;
-}
-
-.dash-right .avisos .div-form label {
-  width: 95%;
-}
-
-.dash-right .avisos .div-form input {
-  width: 95%;
-  border-radius: 5px;
-}
-
-.dash-right .avisos .div-form textarea {
-  width: 95%;
-  border: 3px solid #e6005a;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.dash-right .avisos .div-form button {
-  cursor: pointer;
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  color: white;
-  background-color: #e6005a;
-  width: 120px;
-} */
-
-/* .publicacao-btn-editar {
-  cursor: pointer;
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 5px 8px;
-  color: white;
-  background-color: #e6005a;
-  width: 80px;
-} */
-
-/* .publicacao {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: stretch;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  border-bottom: 3px solid #e6005a;
-  padding: 20px;
-}
-
-.publicacao>*:not(:last-child) {
-  padding: 0 0 10px 0;
-} */
 
 .div-results {
   width: 100%;
@@ -123,27 +42,6 @@ body {
   overflow: auto;
 }
 
-/* .area-parametros-alerta {
-  border: 2px solid pink; 
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  margin: auto;
-  margin-top: 10px;
-  background-color: #212124;
-} */
-
-/* .area-parametros-alerta .titulo-legenda {
-  color: white;
-  font-weight: 600;
-  width: fit-content;
-  margin: 10px 20px;
-} */
-/* 
-.parametros-alerta {
-  display: flex;
-  width: 100%;
-} */
 
 .item-regua {
   width: 20%;
@@ -163,22 +61,7 @@ body {
 .item-regua p:nth-child(2) {
   font-weight: 800;
 }
-/* 
-.perigo-frio {
-  background-color: #5c6bc0;
-}
 
-.perigo-quente {
-  background-color: #ff7043;
-}
-
-.alerta-frio {
-  background-color: #42a5f5;
-}
-
-.alerta-quente {
-  background-color: #ffee58;
-} */
 
 .ideal {
   background-color: #9ccc65;
@@ -212,27 +95,6 @@ body {
   width: fit-content;
 }
 
-/* .card-aquario p {
-  margin: 0;
-  font-size: 50px;
-  font-weight: lighter;
-  text-align: left;
-}
-
-.desc-aquario {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-}
-
-.desc-aquario .cor-alerta {
-  width: 30px;
-}
-
-.title-aquario {
-  width: 100%;
-} */
 
 
 .cards h1 {
@@ -242,20 +104,6 @@ body {
   font-weight: lighter;
   margin: 20px;
 }
-/* 
-.temperatura,
-.umidade {
-  margin: 5px;
-  margin-left: 20px;
-  width: 75%;
-}
-
-.cor-alerta {
-  width: 13%;
-  height: 30%;
-  border-radius: 50%;
-  display: inline-block;
-} */
 
 .btns-dash {
   display: flex;

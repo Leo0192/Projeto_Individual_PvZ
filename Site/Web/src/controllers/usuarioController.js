@@ -10,12 +10,12 @@ function autenticar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
 console.log(senha,email)
-    // Faz uma chamada ao banco de dados e traz os dados das tabelas
+
     usuarioModel.autenticar(email, senha)
         .then(
             function (resultadoAutenticar) {
                 console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
-                console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
+                console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`);
 
                 if (resultadoAutenticar.length == 1) {
                     console.log(resultadoAutenticar);
@@ -31,10 +31,7 @@ console.log(senha,email)
                         nome_usuario: resultadoAutenticar[0].nome_usuario,
                         senha: resultadoAutenticar[0].senha,
                     });
-                    // } else {
-                    //     res.status(204).json({ aquarios: [] });
-                    // }
-                    // })
+
                 } else if (resultadoAutenticar.length == 0) {
                     res.status(403).send("Email e/ou senha inválido(s)");
                 } else {
