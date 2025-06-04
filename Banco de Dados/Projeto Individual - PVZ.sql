@@ -26,7 +26,6 @@ qtdPerguntas int
 create table if not exists usuarioQuiz(
 fkQuiz int,
 fkUsuario int,
-acertos int,
 pontuacao int,
 foreign key (fkQuiz) references Quiz(id),
 foreign key (fkUsuario) references usuario(id),
@@ -37,18 +36,14 @@ primary key (fkUsuario, fkQuiz)
 -- Inserindo dados na tabela Usuario
 
 INSERT INTO usuario (nome, nome_usuario, email, senha)
-VALUES
+VALUES ();
 
-  ('leo1231', 'leoqwdad1', 'leo@gmafagaail.com', 'senhasdafasa123'),
-  ('João Souza', 'joaosouza', 'joao.souza@email.com', 'senha456'),
-  ('Ana Costa', 'anacosta', 'ana.costa@email.com', 'senha789');
   
 INSERT INTO Quiz (nome, categoria, qtdPerguntas)
 VALUES ('Plants vs Zombies', 'jogos', 10);
 
-INSERT INTO usuarioQuiz(fkQuiz,fkUsuario,acertos,pontuacao)
+INSERT INTO usuarioQuiz(fkQuiz,fkUsuario,pontuacao)
 VALUES ();
-  
 
 -- dados inseridos no commit anterior
   select* from usuario;
