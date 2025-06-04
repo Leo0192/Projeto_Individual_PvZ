@@ -1,6 +1,6 @@
 const perguntas = [
     {
-        pergunta: "Qual a primeria planta que ganhamos no jogo",
+        pergunta: "Qual a primeria planta que ganhamos no jogo?",
         respostas: [
 
             { id: 1, text: "Batatamina", correct: false },
@@ -12,116 +12,116 @@ const perguntas = [
     },
 
     {
-        pergunta: "Qual a primeria planta que ganhamos no jogo",
+        pergunta: "Qual o primeiro zumbi que enfrentamos?",
         respostas: [
 
-            { id: 1, text: "Batatamina", correct: false },
-            { id: 2, text: "Disparervilha", correct: false },
-            { id: 3, text: "Girassol", correct: true },
-            { id: 4, text: "Gelervilha", correct: false },
+            { id: 1, text: "Zumbi de Gravata", correct: true },
+            { id: 2, text: "Zumbi de Gravata cabeça de cone", correct: false },
+            { id: 3, text: "Zumbi de Gravata cabeça de balde", correct: true },
+            { id: 4, text: "Zumbi Saltador", correct: false },
 
         ],
     },
 
 
     {
-        pergunta: "Qual a primeria planta que ganhamos no jogo",
+        pergunta: "Qual o nome do humano que nos fornece dicas até o final do jogo?",
         respostas: [
 
-            { id: 1, text: "Batatamina", correct: false },
-            { id: 2, text: "Disparervilha", correct: false },
-            { id: 3, text: "Girassol", correct: true },
-            { id: 4, text: "Gelervilha", correct: false },
+            { id: 1, text: "Dave Doidão", correct: true },
+            { id: 2, text: "Ana Nanão", correct: false },
+            { id: 3, text: "Erika Etika", correct: false },
+            { id: 4, text: "Bernardo Eduardo", correct: false },
 
         ],
     },
 
 
     {
-        pergunta: "Qual a primeria planta que ganhamos no jogo",
+        pergunta: "Qual dos seguintes famosos é representando dentro do jogo?",
         respostas: [
 
-            { id: 1, text: "Batatamina", correct: false },
-            { id: 2, text: "Disparervilha", correct: false },
-            { id: 3, text: "Girassol", correct: true },
-            { id: 4, text: "Gelervilha", correct: false },
+            { id: 1, text: "Michael Jordan", correct: false },
+            { id: 2, text: "Michael Jackson", correct: true },
+            { id: 3, text: "Morgan Freeman", correct: false },
+            { id: 4, text: "Rihanna", correct: false },
 
         ],
     },
 
 
     {
-        pergunta: "Qual a primeria planta que ganhamos no jogo",
+        pergunta: "Em qual ano a primeira versão do jogo foi lançada?",
         respostas: [
 
-            { id: 1, text: "Batatamina", correct: false },
-            { id: 2, text: "Disparervilha", correct: false },
-            { id: 3, text: "Girassol", correct: true },
-            { id: 4, text: "Gelervilha", correct: false },
+            { id: 1, text: "2007", correct: false },
+            { id: 2, text: "2010", correct: false },
+            { id: 3, text: "2009", correct: true },
+            { id: 4, text: "2012", correct: false },
 
         ],
     },
 
 
     {
-        pergunta: "Qual a primeria planta que ganhamos no jogo",
+        pergunta: "Qual o nome do líder dos zumbis?",
         respostas: [
 
-            { id: 1, text: "Batatamina", correct: false },
-            { id: 2, text: "Disparervilha", correct: false },
-            { id: 3, text: "Girassol", correct: true },
-            { id: 4, text: "Gelervilha", correct: false },
+            { id: 1, text: "Capitão Zumbão", correct: false },
+            { id: 2, text: "General Zumboid", correct: false },
+            { id: 3, text: "Dr Zumbão", correct: true },
+            { id: 4, text: "Cientista Zumbin", correct: false },
 
         ],
     },
 
 
     {
-        pergunta: "Qual a primeria planta que ganhamos no jogo",
+        pergunta: "Qual a palavra que os zumbis mais falam?",
         respostas: [
 
-            { id: 1, text: "Batatamina", correct: false },
-            { id: 2, text: "Disparervilha", correct: false },
-            { id: 3, text: "Girassol", correct: true },
-            { id: 4, text: "Gelervilha", correct: false },
+            { id: 1, text: "Human (humano)", correct: false },
+            { id: 2, text: "Brain (cerebro)", correct: true },
+            { id: 3, text: "Attack (atacar)", correct: false },
+            { id: 4, text: "Let’s Go (Vamos)", correct: false },
 
         ],
     },
 
     {
-        pergunta: "Qual a primeria planta que ganhamos no jogo",
+        pergunta: "Qual das seguintes Plantas não tem no jogo original?",
         respostas: [
 
-            { id: 1, text: "Batatamina", correct: false },
-            { id: 2, text: "Disparervilha", correct: false },
-            { id: 3, text: "Girassol", correct: true },
-            { id: 4, text: "Gelervilha", correct: false },
-
-        ],
-    },
-
-
-    {
-        pergunta: "Qual a primeria planta que ganhamos no jogo",
-        respostas: [
-
-            { id: 1, text: "Batatamina", correct: false },
-            { id: 2, text: "Disparervilha", correct: false },
-            { id: 3, text: "Girassol", correct: true },
-            { id: 4, text: "Gelervilha", correct: false },
+            { id: 1, text: "Abobora", correct: false },
+            { id: 2, text: "Cereja", correct: false },
+            { id: 3, text: "Planta Carnivora", correct: false },
+            { id: 4, text: "Espinafre", correct: true },
 
         ],
     },
 
 
     {
-        pergunta: "Qual a primeria planta que ganhamos no jogo",
+        pergunta: "O que os zumbis enviam para o usuário ao chegar no último nível de cada estágio?",
         respostas: [
 
-            { id: 1, text: "Batatamina", correct: false },
-            { id: 2, text: "Disparervilha", correct: false },
-            { id: 3, text: "Girassol", correct: true },
-            { id: 4, text: "Gelervilha", correct: false },
+            { id: 1, text: "Uma Carta", correct: true },
+            { id: 2, text: "Uma nova planta maligna", correct: false },
+            { id: 3, text: "Um objeto humano", correct: false },
+            { id: 4, text: "Um doce", correct: false },
+
+        ],
+    },
+
+
+    {
+        pergunta: "Qual dos seguintes lugares nós não nos defendemos contra os zumbis?",
+        respostas: [
+
+            { id: 1, text: "Telhado", correct: false },
+            { id: 2, text: "Quintal", correct: false },
+            { id: 3, text: "Piscina", correct: false },
+            { id: 4, text: "Garagem", correct: true },
 
         ],
     },
