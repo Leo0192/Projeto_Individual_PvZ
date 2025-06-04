@@ -34,13 +34,12 @@ primary key (fkUsuario, fkQuiz)
 
 -- um usuário pode fazer o quiz 1 vez mas uma pergunta pode ter mais de uma resposta correta
 -- Inserindo dados na tabela Usuario
-
-INSERT INTO usuario (nome, nome_usuario, email, senha)
-VALUES ();
-
   
 INSERT INTO Quiz (nome, categoria, qtdPerguntas)
 VALUES ('Plants vs Zombies', 'jogos', 10);
+
+INSERT INTO usuario (nome, nome_usuario, email, senha)
+VALUES ();
 
 INSERT INTO usuarioQuiz(fkQuiz,fkUsuario,pontuacao)
 VALUES ();

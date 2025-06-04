@@ -11,17 +11,17 @@
 
 <body>
 
-
+<!-- <section class="section_esquerda"> -->
     <div class="janela">
         <div class="header-left">
             <h1>PvZ Fanpage</h1>
-
+            
             <img src="../imagens/Site-logo.png" alt="">
-
+            
             <div class="btn-nav">
                 <a href="dashboard.html">Gráfico</a>
             </div>
-
+            
             <div class="btn-nav">
                 <a href="Quiz.html">Quiz</a>
             </div>
@@ -29,23 +29,30 @@
             <div class="btn-logout" onclick="limparSessao()">
                 <h3>Sair</h3>
             </div>
-
+            
         </div>
-    </div>
-    <div class="app ">
-        <h1 class="titulo">Quiz</h1>
-        <div class="quiz">
-            <h2 id="pergunta">Pergunta</h2>
-            <div id="answer_button">
-                <button class="btn">Resposta 1</button>
-                <button class="btn">Resposta 2</button>
-                <button class="btn">Resposta 3</button>
-                <button class="btn">Resposta 4</button>
 
+    
+
+        <div class="quizDireita">
+            
+            <div class="app ">
+                <h1 class="titulo">Quiz</h1>
+                <div class="quiz">
+                    <h2 id="pergunta">Pergunta</h2>
+                    <div id="answer_button">
+                        <button class="btn">Resposta 1</button>
+                        <button class="btn">Resposta 2</button>
+                        <button class="btn">Resposta 3</button>
+                        <button class="btn">Resposta 4</button>
+                        
+                    </div>
+                    <button class="next_btn" id="next_btn">Próxima Pergunta</button>
+                </div>
             </div>
-            <button class="next_btn" id="next_btn">Próxima Pergunta</button>
         </div>
-    </div>
+
+</div>
 </body>
 
 </html>

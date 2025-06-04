@@ -42,75 +42,7 @@ span {
 }
 
 /* editando o quiz */
-.app{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #538335;
-    width: 50%;
-    margin: 100px auto 0;
-    padding: 30px;
-}
 
-.quiz{
-padding: 20px 0;
-}
-
-.quiz h2{
-    font-size: 18px;
-    color: #0d1c18;
-}
-
-.titulo{
-    font-weight: 600;
-    border-bottom:solid black 1px;
-    padding-bottom: 30px;
-    width: 100%;
-}
-
-.btn{
-    background-color: white;
-    color: #0d1c18;
-    width: 100%;
-    border: solid 1px black;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: left;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.btn:hover:not([disabled]){
-    background-color: #222;
-    color: white;
-}
-
-.btn:disabled{
-    cursor: no-drop;
-}
-
-.next_btn{
-    background-color: #0d1c18;
-    color: white;
-    width: 150px;
-    border: 0;
-    padding: 10px;
-    margin: 20 auto 0;
-    border-radius: 4px;
-    cursor: pointer;
-    display: none;
-}
-
-
-.correct{
-    background-color: green;
-}
-
-.incorrect{
-    background-color: lightcoral;
-}
 /* editando o login */
 p {
     font-size: 18px;
@@ -374,3 +306,7 @@ a {
 .tutorial .container .box {
     color: white;
 }
+/* 
+.section_meio{
+
+} */
