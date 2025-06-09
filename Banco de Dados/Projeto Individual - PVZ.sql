@@ -39,7 +39,7 @@ INSERT INTO Quiz (nome, categoria, qtdPerguntas)
 VALUES ('Plants vs Zombies', 'jogos', 10);
 
 INSERT INTO usuario (nome, nome_usuario, email, senha)
-VALUES ();
+VALUES ('um', 'um', 'um', 'um');
 
 INSERT INTO usuarioQuiz(fkQuiz,fkUsuario,pontuacao)
 VALUES ();

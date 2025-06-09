@@ -12,7 +12,16 @@ function inserirPontuacao(pontuacao, fkUsuario) {
 function buscarPontuacao(idUsuario) {
 
     var instrucaoSql = `
-    select max(pontuacao) as pontuacao from usuarioQuiz
+    select pontuacao as pontuacao from usuarioQuiz
+    where fkUsuario = ${idUsuario};`
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function buscarPontuacaoMaxima(idUsuario) {
+
+    var instrucaoSql = `
+    select max(pontuacao) as pontuacaoMaxima from usuarioQuiz
     where fkUsuario = ${idUsuario};`
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -20,5 +29,6 @@ function buscarPontuacao(idUsuario) {
 
 module.exports = {
     buscarPontuacao,
-    inserirPontuacao
+    inserirPontuacao,
+    buscarPontuacaoMaxima
 }
