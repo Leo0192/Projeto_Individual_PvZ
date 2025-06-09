@@ -27,7 +27,6 @@ console.log(senha,email)
                     res.json({
                         id: resultadoAutenticar[0].id,
                         email: resultadoAutenticar[0].email,
-                        nome: resultadoAutenticar[0].nome,
                         nome_usuario: resultadoAutenticar[0].nome_usuario,
                         senha: resultadoAutenticar[0].senha,
                     });
@@ -54,9 +53,7 @@ function cadastrar(req, res) {
     var senha = req.body.senha;
 
     // Faça as validações dos valores
-    if (nome == undefined) {
-        res.status(400).send("Seu nome está undefined!");
-    } else if (nome_usuario == undefined) {
+    if (nome_usuario == undefined) {
         res.status(400).send("Seu nome de usuario está undefined!");
     } else if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
@@ -65,7 +62,7 @@ function cadastrar(req, res) {
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, nome_usuario, email, senha)
+        usuarioModel.cadastrar(nome_usuario, email, senha)
             .then(
                 function (resultado) {
                     res.json(resultado);
