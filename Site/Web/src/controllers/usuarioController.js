@@ -49,7 +49,6 @@ console.log(senha,email)
 
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-    var nome = req.body.nome;
     var nome_usuario = req.body.nome_usuario;
     var email = req.body.email;
     var senha = req.body.senha;

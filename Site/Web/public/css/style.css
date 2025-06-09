@@ -360,7 +360,7 @@ a {
     height: 180px;
     position: relative;
     left: 800px;
-
+    bottom: 850px;
 }   
 
 .mordendo{
@@ -369,5 +369,12 @@ a {
     height: 200px;
     position: relative;
     left: 450px;
+}
 
+.gravata{
+    display: flex;
+    width: 100px;
+    height: 150px;
+    position: relative;
+    left: 800px;
 }
