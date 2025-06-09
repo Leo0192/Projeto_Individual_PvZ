@@ -336,19 +336,22 @@ a {
     font-size: 22px
 }
 
-.disparervilha{
+.gelervilha{
     display: flex; 
     width: 100px;;
     height: 100px;
-    position: 123;
+    position: relative;
+    top: 450px;
+    left: 320px;
 }
 
 .fofinho{
     display: flex; 
     width: 75px;
     height: 120px;
-
     position: relative;
+    bottom: 300px;
+    left: 220px;
 }
 
 .balao{
@@ -356,11 +359,15 @@ a {
     width: 100px;;
     height: 180px;
     position: relative;
-}
+    left: 800px;
+
+}   
 
 .mordendo{
     display: flex; 
-    width: 100px;;
-    height: 100px;
+    width: 200px;;
+    height: 200px;
     position: relative;
+    left: 450px;
+
 }
