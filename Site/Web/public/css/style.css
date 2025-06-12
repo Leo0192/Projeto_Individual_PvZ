@@ -164,7 +164,7 @@ a {
 
     width: 700px;
     height: 280px;
-    margin-top: 100px;
+    margin-top: 20px;
     padding: 20px;
     border-radius: 50px;
 }
@@ -189,7 +189,8 @@ a {
 
     width: 700px;
     height: 300px;
-    margin-top: 100px;
+    margin-top: 20px;
+    margin-bottom: 100px;
     padding: 20px;
     border-radius: 50px;
 }
@@ -393,3 +394,21 @@ a {
     position: relative;
     left: 800px;
 }
+
+.batatamina{
+    display: flex;
+    position: relative;
+    width: 100px;
+    height: 80px;
+    margin-top: 20px;
+    margin-left: 500px;
+}
+
+.girassol{
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 160px;
+    margin-top: 20px;
+    margin-left: 500px;
+}   
