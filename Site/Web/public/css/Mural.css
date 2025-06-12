@@ -409,3 +409,7 @@ padding: 20px 0;
   align-items: center;
   justify-content: center;
 }
+
+.body2{
+  background-image: url(../imagens/resized_image.png);
+}
