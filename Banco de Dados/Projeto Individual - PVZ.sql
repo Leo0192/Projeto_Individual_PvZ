@@ -23,12 +23,12 @@ qtdPerguntas int
 );
 
 create table if not exists usuarioQuiz(
+id int auto_increment primary key,
 fkQuiz int,
 fkUsuario int,
 pontuacao int,
 foreign key (fkQuiz) references Quiz(id),
-foreign key (fkUsuario) references usuario(id),
-primary key (fkUsuario, fkQuiz)
+foreign key (fkUsuario) references usuario(id)
 );
 
 -- um usuário pode fazer o quiz 1 vez mas uma pergunta pode ter mais de uma resposta correta
