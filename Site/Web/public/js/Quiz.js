@@ -200,7 +200,7 @@ function handleNextButton(){
 function AparecerPontuacao(){
     resetState()
     PerguntaElement.innerHTML = `Você acertou ${pontuacao} de ${perguntas.length}`
-    ProximoButton.innerHTML = 'Play Again'
+    ProximoButton.innerHTML = 'Jogar de novo'
     ProximoButton.style.display = "block"
     DashboardButton.style.display = "block"
 

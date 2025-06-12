@@ -395,13 +395,14 @@ a {
     left: 800px;
 }
 
-.batatamina{
+.bandeira{
     display: flex;
     position: relative;
-    width: 100px;
-    height: 80px;
-    margin-top: 20px;
-    margin-left: 500px;
+    width: 150px;
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 420px;
+    margin-bottom: 10px;
 }
 
 .girassol{
