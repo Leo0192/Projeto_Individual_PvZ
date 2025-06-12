@@ -9,8 +9,8 @@
     <title>Plants Vs Zombies | Gráficos</title>
 
 
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/Mural.css">
-    <link rel="stylesheet  eet" href="../css/style.css" />
     <script src="../js/sessao.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,6 +27,8 @@
     <div class="janela">
         <div class="header-left">
             <h1>PvZ Fanpage</h1>
+
+            <h3 class="bem_vindo">Bem Vindo de volta,<span id="fk_Usuario">Usuario</span> </h3>
 
             <img src="../imagens/Site-logo.png" alt="">
 
@@ -48,11 +50,23 @@
         <div class="paredeDireita2">
 
             <div id="graficos">
-                <canvas id="graficoUltimo"></canvas>
-                <canvas id="graficoAtual"></canvas>
-                <canvas id="graficoMedio" class="graficoMedio"></canvas>
-            </div>
-        </div>
+  <div class="grafico-container">
+    <canvas id="graficoUltimo"></canvas>
+    <p>Gráfico referente a<b> maior pontuação realizada.</b> <br>
+    Para mais informações passe o cursos por cima do gráfico </p>
+  </div>
+  <div class="grafico-container">
+    <canvas id="graficoAtual"></canvas>
+    <p>Gráfico referente a <b> última pontuação realizada.</b> <br>
+    Para mais informações passe o cursos por cima do gráfico </p>
+  </div>
+  <div class="grafico-container">
+    <canvas id="graficoMedio" class="graficoMedio"></canvas>
+    <p>Gráfico referente ao <b>numero de acertos médio realizado.</b> <br>
+    Para mais informações passe o cursos por cima do gráfico</p>
+  </div>
+</div>
+               </div>
     </div>
 
 
@@ -61,7 +75,7 @@
 </html>
 
 <script>
-
+ fk_Usuario.innerHTML = sessionStorage.NOME_USUARIO
 
     function carregarGrafico() {
 
@@ -126,14 +140,14 @@
                 console.log(fkUsuario)
                 console.log(data[0].pontuacaoMaxima)
                 console.log(data[0])
-                var erros = 10 - data[0].pontuacaoMaxima;
+                var erros = 10 - data[0].pontuacao;
 
                 chartjs = new Chart(ctx2, {
                     type: 'doughnut',
                     data: {
                         labels: ['Acertos', 'Erros'],
                         datasets: [{
-                            label: 'Resultados do Quiz',
+                            label: 'Resultado do Quiz',
                             data: [data[0].pontuacao, erros],
                             backgroundColor: ['green', 'red'],
                             borderColor: ['green', 'red'],
@@ -171,17 +185,17 @@
 
                 console.log(fkUsuario)
                 console.log(data[0])
-                var erros = 10 - data[0].pontuacaoMedia;
+                var erros = 10 - data[0].pontuacao;
 
                 chartjs = new Chart(ctx3, {
-                    type: 'bar',
+                    type: 'doughnut',
                     data: {
-                        labels: ['Pontuação'],
+                        labels: ['Acertos', 'Erros'],
                         datasets: [{
-                            label: 'Acertos',
+                            label: 'Resultado do Quiz',
                             data: [data[0].pontuacao, erros],
-                            backgroundColor: ['green'],
-                            borderColor: ['green'],
+                            backgroundColor: ['green', 'red'],
+                            borderColor: ['green' , 'red'],
                             borderWidth: 2
                         }]
                     },
@@ -202,18 +216,7 @@
 
                             }
                         },
-                        scales: {
-                            x:{
-                                ticks: {
-                                    color:"black"
-                                }
-                            },
-                            y:{
-                                ticks:{
-                                    color:"black"
-                                }
-                            }
-                        }
+                        
                     },
                 }
                 );

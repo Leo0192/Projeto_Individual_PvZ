@@ -1,3 +1,5 @@
+ fk_Usuario.innerHTML = sessionStorage.NOME_USUARIO
+
 const perguntas = [
     {
         pergunta: "Qual a primeria planta que ganhamos no jogo?",
@@ -132,6 +134,7 @@ const perguntas = [
 const PerguntaElement = document.getElementById("pergunta")
 const answerButtons  = document.getElementById("answer_button")
 const ProximoButton = document.getElementById("next_btn")
+const DashboardButton = document.getElementById("dash_btn")
 
 var perguntaAtualIndex = 0
 var pontuacao = 0
@@ -199,6 +202,8 @@ function AparecerPontuacao(){
     PerguntaElement.innerHTML = `Você acertou ${pontuacao} de ${perguntas.length}`
     ProximoButton.innerHTML = 'Play Again'
     ProximoButton.style.display = "block"
+    DashboardButton.style.display = "block"
+
     guardarResultado();
 
 }

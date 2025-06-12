@@ -1,11 +1,5 @@
 var usuarioModel = require("../models/usuarioModel");
 
-// function cadastrar(req, res) {
-//     var nome = req.body.nomeServer;
-//     var nome_usuario = req.bodynome_usuarioServer;
-//     var email = req.body.emailServer;
-//     var senha = req.body.senhaServer;
-
 function autenticar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
@@ -20,10 +14,6 @@ console.log(senha,email)
                 if (resultadoAutenticar.length == 1) {
                     console.log(resultadoAutenticar);
 
-                    // tem que adicionar o campo que será utilizado/ coluna
-                    // aquarioModel.buscarAquariosPorEmpresa(resultadoAutenticar[0].empresaId)
-                    //     .then((resultadoAquarios) => {
-                    //         if (resultadoAquarios.length > 0) {
                     res.json({
                         id: resultadoAutenticar[0].id,
                         email: resultadoAutenticar[0].email,

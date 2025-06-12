@@ -85,18 +85,19 @@
 
 
     function entrar() {
-        // aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "Erro, há algum campo em branco";
             finalizarAguardar();
             return false;
         }
         else {
+            mensagem_erro.innerHTML =
+            "Login realizado com sucesso, Bem vindo";
             setInterval(sumirMensagem, 5000)
         }
 
@@ -129,7 +130,7 @@
 
                     setTimeout(function () {
                         window.location = "./grafico/Quiz.html";
-                    }, 1000); // apenas para exibir o loading
+                    }, 2000); // apenas para exibir o loading
 
                 });
 

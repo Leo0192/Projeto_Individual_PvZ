@@ -32,8 +32,8 @@ function buscarPontuacaoMaxima(idUsuario) {
 function buscarPontuacaoMedia(idUsuario) {
 
     var instrucaoSql = `
-       select round (AVG(pontuacao)) as pontuacao from usuarioQuiz
-        where fkUsuario = ${idUsuario} order by pontuacao desc limit 1;`
+       	    select truncate (AVG(pontuacao),1) as pontuacao from usuarioQuiz
+    where fkUsuario = ${idUsuario} order by pontuacao desc limit 1;;`
        
     console.log("entrei na rota buscar maxima")
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
