@@ -50,6 +50,7 @@
             <div id="graficos">
                 <canvas id="graficoUltimo"></canvas>
                 <canvas id="graficoAtual"></canvas>
+                <canvas id="graficoMedio" class="graficoMedio"></canvas>
             </div>
         </div>
     </div>
@@ -144,6 +145,51 @@
                         plugins: {title: {
                                 display: true,
                                 text: 'Maior pontuação realizada',
+                                color: 'white',
+                                font: {
+                                    size: 18
+                                }
+                            },
+                            legend: {
+                                labels: {
+                                    color: 'white'
+                                }
+
+                            }
+                        }
+                    },
+                }
+                );
+
+            });
+
+            const ctx3 = document.getElementById("graficoMedio").getContext("2d");
+
+        fetch(`/quiz/pontuacaoMedia/${fkUsuario}`)
+            .then(resultado => resultado.json())
+            .then(data => {
+
+                console.log(fkUsuario)
+                console.log(data[0])
+                var erros = 10 - data[0].pontuacaoMedia;
+
+                chartjs = new Chart(ctx3, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Pontuação'],
+                        datasets: [{
+                            label: 'Resultado Médio',
+                            data: [data[0].pontuacao, erros],
+                            backgroundColor: ['green'],
+                            borderColor: ['green'],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {title: {
+                                display: true,
+                                text: 'Pontuação média realizada',
                                 color: 'white',
                                 font: {
                                     size: 18
