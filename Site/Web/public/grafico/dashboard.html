@@ -10,7 +10,7 @@
 
 
     <link rel="stylesheet" href="../css/Mural.css">
-    <link rel="stylesh  eet" href="../css/style.css" />
+    <link rel="stylesheet  eet" href="../css/style.css" />
     <script src="../js/sessao.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,8 +19,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
-
-    <!-- <body onload=" atualizarFeed()"> -->
+</head>
+<!-- <body onload=" atualizarFeed()"> -->
 
 <body onload="carregarGrafico()">
 
@@ -91,88 +91,68 @@
                     },
                     options: {
                         responsive: true,
-                            plugins: {
-                                title:{
-                                    display: true,
-                                    text:'Ultimo quiz realizado',
-                                    color: 'white',
-                                    font:{
-                                        size: 18
-                                    }
-                                },
-                                legend: {
-                                    display: true,
-                                    labels: {
-                                        color: 'white'
-                                    }
-                                
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Ultimo quiz realizado',
+                                color: 'white',
+                                font: {
+                                    size: 18
                                 }
+                            },
+                            legend: {
+                                display: true,
+                                labels: {
+                                    color: 'white'
+                                }
+
                             }
-                        },
-                    }
+                        }
+                    },
+                }
                 );
-                
+
             });
 
 
-        // const ctx2 = document.getElementById("graficoUltimo").getContext("2d");
+        const ctx2 = document.getElementById("graficoUltimo").getContext("2d");
 
-        // fetch(`/quiz/pontuacaoMaxima/${fkUsuario}`)
-        //     .then(resultado => resultado.json())
-        //     .then(data => {
+        fetch(`/quiz/pontuacaoMaxima/${fkUsuario}`)
+            .then(resultado => resultado.json())
+            .then(data => {
 
-        //         console.log(fkUsuario)
-        //         console.log(data[0].pontuacaoMaxima)
-        //         console.log(data[0])
-        //         var erros = 10 - data[0].pontuacaoMaxima;
+                console.log(fkUsuario)
+                console.log(data[0].pontuacaoMaxima)
+                console.log(data[0])
+                var erros = 10 - data[0].pontuacaoMaxima;
 
-        //         chartjs = new Chart(ctx2, {
-        //             type: 'doughnut',
-        //             data: {
-        //                 labels: ['Acertos', 'Erros'],
-        //                 datasets: [{
-        //                     label: 'Resultados do Quiz',
-        //                     data: [data[0].pontuacaoMaxima, erros],
-        //                     backgroundColor: ['green', 'red'],
-        //                     borderColor: ['green', 'red'],
-        //                     borderWidth: 2
-        //                 }]
-        //             },
-        //             options: {
-        //                 responsive: true,
-        //                     plugins: {
-        //                         legend: {
-        //                             labels: {
-        //                                 color: 'white'
-        //                             }
-                                
-        //                         }
-        //                     }
-        //                 },
-        //             }
-        //         );
-                
-        //     });
+                chartjs = new Chart(ctx2, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Acertos', 'Erros'],
+                        datasets: [{
+                            label: 'Resultados do Quiz',
+                            data: [data[0].pontuacaoMaxima, erros],
+                            backgroundColor: ['green', 'red'],
+                            borderColor: ['green', 'red'],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: 'white'
+                                }
 
+                            }
+                        }
+                    },
+                }
+                );
 
-
-                // x: {
-                //     ticks: {
-                //         color: 'white'
-                //     },
-                //     grid: {
-                //         color: 'rgba(255, 255, 255, 0.2)'
-                //     }
-                // },
-                // y: {
-                //     beginAtZero: true,
-                //     ticks: {
-                //         color: 'white'
-                //     },
-                //     grid: {
-                //         color: 'rgba(255, 255, 255, 0.2)'
-                //     }
-                // }
+            });
     }
 
 </script>
