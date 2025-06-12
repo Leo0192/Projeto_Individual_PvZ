@@ -11,7 +11,7 @@ router.get("/pontuacao/:fkUsuario", function (req, res) {
     quizController.buscarPontuacao(req, res);
 })
 
-router.get("/pontuacaoMaxima/:fkUsuario", function (req, res) {
-    quizController.buscarPontuacaoMaxima(req, res);
-})
+// router.get("/pontuacaoMaxima/:fkUsuario", function (req, res) {
+//     quizController.buscarPontuacaoMaxima(req, res);
+// })
 module.exports = router;

@@ -3,8 +3,8 @@ var database = require("../database/config");
 function inserirPontuacao(pontuacao, fkUsuario) {
 
     var instrucaoSql = `
-    INSERT INTO usuarioQuiz (fkQUiz, fkUsuario, pontuacao)
-    VALUES (1, ${fkUsuario} ,${pontuacao} );`
+    INSERT INTO usuarioQuiz (fkQUiz, fkUsuario, pontuacao, data)
+    VALUES (1, ${fkUsuario} ,${pontuacao}, now() );`
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
@@ -12,23 +12,23 @@ function inserirPontuacao(pontuacao, fkUsuario) {
 function buscarPontuacao(idUsuario) {
 
     var instrucaoSql = `
-    select pontuacao as pontuacao from usuarioQuiz
-    where fkUsuario = ${idUsuario};`
+    select pontuacao as pontuação from usuarioQuiz
+    where fkUsuario = fkUsuario order by data desc limit 1;`
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
 
-function buscarPontuacaoMaxima(idUsuario) {
+// function buscarPontuacaoMaxima(idUsuario) {
 
-    var instrucaoSql = `
-    select max(pontuacao) as pontuacaoMaxima from usuarioQuiz
-    where fkUsuario = ${idUsuario};`
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
-}
+//     var instrucaoSql = `
+//        select pontuacao as pontuação from usuarioQuiz
+//        where fkUsuario = fkUsuario order by pontuacao desc limit 1;`
+//     console.log("Executando a instrução SQL: \n" + instrucaoSql);
+//     return database.executar(instrucaoSql);
+// }
 
 module.exports = {
     buscarPontuacao,
     inserirPontuacao,
-    buscarPontuacaoMaxima
+    // buscarPontuacaoMaxima
 }

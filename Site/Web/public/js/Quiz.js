@@ -197,7 +197,10 @@ function handleNextButton(){
 function AparecerPontuacao(){
     resetState()
     PerguntaElement.innerHTML = `Você acertou ${pontuacao} de ${perguntas.length}`
+    ProximoButton.innerHTML = 'Play Again'
+    ProximoButton.style.display = "block"
     guardarResultado();
+
 }
 
 ProximoButton.addEventListener("click", () => {
