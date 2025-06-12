@@ -41,28 +41,53 @@ function buscarPontuacao(req, res) {
     });
 }
 
-// function buscaPontuacaoMaxima(req,res){
+function buscarPontuacaoMaxima(req,res){
 
-// const fkUsuario = req.params.fkUsuario;
+const fkUsuario = req.params.fkUsuario;
 
-//     console.log(`Recuperando medidas em tempo real`);
+    console.log(`Recuperando medidas em tempo real`);
 
-//     quizModel.buscarPontuacaoMaxima(fkUsuario)
-//     .then(function (resultado) {
-//         if (resultado.length > 0) {
-//             res.status(200).json(resultado);
-//         } else {
-//             res.status(204).send("Nenhum resultado encontrado!")
-//         }
-//     }).catch(function (erro) {
-//         console.log(erro);
-//         console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
-//         res.status(500).json(erro.sqlMessage);
-//     });
-// }
+    console.log("entrei no controller pontuação máxima")
+
+    quizModel.buscarPontuacaoMaxima(fkUsuario)
+    .then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function buscarPontuacaoMedia(req,res){
+
+const fkUsuario = req.params.fkUsuario;
+
+    console.log(`Recuperando medidas em tempo real`);
+
+    console.log("entrei no controller pontuação máxima")
+
+    quizModel.buscarPontuacaoMedia(fkUsuario)
+    .then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
 
 module.exports = {
     buscarPontuacao,
     inserirPontuacao,
-    // buscaPontuacaoMaxima
+    buscarPontuacaoMaxima,
+    buscarPontuacaoMedia
 }

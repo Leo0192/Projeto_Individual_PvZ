@@ -27,6 +27,7 @@ id int auto_increment primary key,
 fkQuiz int,
 fkUsuario int,
 pontuacao int,
+data datetime,
 foreign key (fkQuiz) references Quiz(id),
 foreign key (fkUsuario) references usuario(id)
 );
@@ -45,4 +46,11 @@ VALUES ('Plants vs Zombies', 'jogos', 10);
   
   select* from usuarioQuiz;
   
-  
+    
+    select pontuacao as pontuacao from usuarioQuiz
+    where fkUsuario = fkUsuario order by data desc limit 1;
+    
+    
+    select pontuacao as pontuacao from usuarioQuiz
+    where fkUsuario = fkUsuario order by pontuacao desc limit 1;
+
